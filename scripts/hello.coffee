@@ -12,11 +12,11 @@ module.exports = (robot) ->
   robot.hear /HELLO$/i, (msg) ->
     msg.send "hello!!!!!!!"
 
-  robot.respond /who are you/i, (msg) ->
-    msg.send = "I'm your hubot!"
+  robot.respond /who are you/i, (res) ->
+    res.reply = "I'm your hubot!"
 
-  robot.respond /who am I/i, (msg) ->
-    msg.send = "You are #{msg.message.user.name}"
+  robot.respond /who am I/i, (res) ->
+    res.reply = "You are #{msg.message.user.name}"
 
   # robot.hear /badger/i, (res) ->
   #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
