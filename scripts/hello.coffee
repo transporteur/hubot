@@ -9,12 +9,10 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
-  robot.hear /HELLO$/i, (msg) ->
-    msg.send "hello!!!!!!!"
-
   robot.respond /who are you/i, (res) ->
     res.reply = "I'm your hubot!"
-
+  robot.hear /HELLO$/i, (msg) ->
+    msg.send "hello!!!!!!!"
   robot.respond /who am I/i, (res) ->
     res.reply = "You are #{msg.message.user.name}"
 
