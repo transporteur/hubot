@@ -9,6 +9,8 @@
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) ->
+  robot.hear /test/i, (msg) ->
+    msg.send "test!test!!"
   robot.hear /HELLO$/i, (msg) ->
     msg.send "hello!!"
   robot.respond /open the door/i, (res) ->
